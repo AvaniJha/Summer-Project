@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class EnterMarksAndCaculateGradePercentageAndAverage
+{
+    public static void main(String[] args)
+    {
+        
+        
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        double marksHindi=0.0;
+        double marksEnglish=0.0;  
+        double marksScience=0.0;
+        double marksMaths=0.0;
+        double marksSocialScience=0.0;
+        double average;
+        double percentage;
+        
+        //Inserting marks of each subject
+        
+        System.out.println("Hindi=");
+        marksHindi = scanner.nextDouble();
+        
+        System.out.println("English");
+        marksEnglish = scanner.nextDouble();
+        
+        System.out.println("Science=");
+        marksScience = scanner.nextDouble();
+        
+        System.out.println("Maths=");
+        marksMaths = scanner.nextDouble();
+        
+        System.out.println("Social Science=");
+        marksSocialScience = scanner.nextDouble();
+        
+        //
+        
+        average = ((marksScience + marksMaths + marksHindi + marksEnglish + marksSocialScience)/5);
+        percentage = (((marksScience + marksMaths + marksHindi + marksEnglish + marksSocialScience)/500)*100);
+        
+        System.out.println("Your average of Science, Maths, Hindi, English and Social Sceince is " +average+".");
+        System.out.println("Your percentage of Science, Maths, Hindi, English and Social Sceince is " +percentage+"%.");
+        
+        if(percentage >=80)
+        System.out.println("You have been awarded grade A.");
+        
+        else if(percentage >= 60)
+        System.out.println("You have been awarded grade B.");
+        
+        else if(percentage >= 50)
+        System.out.println("You have been awarded grade C.");
+        
+        else if(percentage < 50)
+        System.out.println("You have failed. Better luck next time !");
+        
+        scanner.close();
+    }
+}
